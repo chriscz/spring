@@ -44,7 +44,7 @@ module Spring
     private
 
     def find_project_root(current_dir)
-      if current_dir.join(gemfile).exist?
+      if current_dir.join('config/application.rb').exist?
         current_dir
       elsif current_dir.root?
         raise UnknownProject.new(Dir.pwd)
